@@ -23,97 +23,113 @@
 		<div class="row justify-content-center">
 			<div class="col-md-12 col-lg-12">
 				<div class="wrap d-md-flex">
-					<div class="img-banner">
-						<img class="img-banner" src="images/banner-sigem.png" alt="imagem principal">
-					</div>
+
 					<div class="login-wrap p-4 p-md-5">
 						<div class="d-flex">
 							<div class="w-100">
 								<h3 class="mb-4">Login</h3>
 							</div>
 						</div>
-						<div class="form-group mb-3">
-							<label class="label" for="estado">Estado</label>
-							<select class="form-control" id="estado" required>
-								<option value="">Selecione o estado</option>
-								<option value="ba">Bahia</option>
-								<option value="pe">Pernambuco</option>
-								<option value="pr">Paraná</option>
-							</select>
-						</div>
-						<div class="form-group mb-3">
-							<label class="label" for="municipio">Município</label>
-							<select class="form-control" id="municipio" required>
-								<option value="">Selecione o município</option>
-								<option value="salvador">Salvador</option>
-								<option value="recife">Recife</option>
-								<option value="curitiba">Curitiba</option>
-							</select>
+
+						<div class="form-row mb-3">
+							<div class="form-group col-sm-6">
+								<label for="estado" class="label label-space">Estado</label>
+								<select class="form-control" id="estado" required>
+									<option value="">Selecione o estado</option>
+									<option value="ba">Bahia</option>
+									<option value="pe">Pernambuco</option>
+									<option value="pr">Paraná</option>
+								</select>
+							</div>
+							<div class="form-group col-sm-6">
+								<label for="municipio" class="label">Município</label>
+								<select class="form-control" id="municipio" required>
+									<option value="">Selecione o município</option>
+									<option value="salvador">Salvador</option>
+									<option value="recife">Recife</option>
+									<option value="curitiba">Curitiba</option>
+								</select>
+							</div>
 						</div>
 
-						<div id="form-div" style="display:none;">
-
+						<div id="form-div" style="display:none; text-align: left;">
 							<div class="container">
 								<div class="toggle-forms">
-									<button class="btn active" data-form="form1">Aluno</button>
-									<button class="btn" data-form="form2">Funcionário</button>
+									<label>
+										<input type="radio" name="form-toggle" value="form1" checked>
+										Aluno
+									</label>
+									<label>
+										<input type="radio" name="form-toggle" value="form2">
+										Funcionário
+									</label>
 								</div>
-								<div class="forms-container">
-									<form id="form1" class="form active">
-										<div class="form-group mb-3">
-											<label class="label" for="name">Nº de matrícula</label>
-											<input type="text" class="form-control" placeholder="Nº de matrícula"
-												required>
-										</div>
-										<div class="form-group mb-3">
-											<label class="label" for="password">Senha</label>
-											<input type="password" class="form-control" placeholder="Senha" required>
+
+								<!--Formulário alunos-->
+								<div class="form-group row">
+									<div class="col-md-6 mb-3">
+										<label class="label" for="name">Matrícula</label>
+										<input type="text" class="form-control" placeholder="Nº de matrícula" required>
+									</div>
+									<div class="col-md-6 mb-3">
+										<label class="label" for="password">Senha</label>
+										<input type="password" class="form-control" placeholder="Senha" required>
+									</div>
+									<div class="col-md-12 d-md-flex justify-content-between align-items-center">
+										<div class="text-md-left mb-3 mb-md-0">
+											<a href="#">Esqueci a senha</a>
+											<br>
+											<a href="#">Primeiro acesso</a>
 										</div>
 										<div class="form-group">
 											<button type="submit"
 												class="form-control btn btn-primary rounded submit px-3">Entrar</button>
 										</div>
-										<div class="form-group d-md-flex">
-											<div class="w-100 text-left">
+									</div>
+
+									<!-- Formulário de funcionários-->
+									<form id="form2" class="form signin-form">
+										<div class="form-group row funcionario">
+											<div class="col-md-6 mb-3">
+												<label class="label" for="cpf">CPF</label>
+												<input type="text" class="form-control" id="cpf" placeholder="Nº do CPF"
+													required>
+											</div>
+											<div class="col-md-6 mb-3">
+												<label class="label" for="password">Senha</label>
+												<input type="password" class="form-control" id="password"
+													placeholder="Senha" required>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="btn-group">
+												<button type="submit"
+													class="btn btn-primary btn-custom rounded submit atividades-remotas">Atividades
+													remotas</button>
+												<button type="submit"
+													class="btn btn-primary btn-custom rounded submit area-administrativa ml-3">Área
+													administrativa</button>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="text-left">
 												<a href="#">Esqueci a senha</a>
 											</div>
 										</div>
 									</form>
-									<form id="form2" class="form">
-										<form action="#" class="signin-form">
-											<div class="form-group mb-3">
-												<label class="label" for="name">CPF</label>
-												<input type="text" class="form-control" placeholder="Nº do CPF"
-													required>
-											</div>
-											<div class="form-group mb-3">
-												<label class="label" for="password">Senha</label>
-												<input type="password" class="form-control" placeholder="Senha"
-													required>
-											</div>
-											<div class="form-group">
-												<button type="submit"
-													class="form-control btn btn-primary rounded submit px-3">Acessar
-													atividades remotas</button>
-											</div>
-											<div class="form-group">
-												<button type="submit"
-													class="form-control btn btn-primary rounded submit px-3">Acessar a
-													área
-													administrativa</button>
-											</div>
-											<div class="form-group d-md-flex">
-												<div class="w-100 text-left">
 
-													<a href="#">Esqueci a senha</a>
-												</div>
-											</div>
-										</form>
+									<!---->
+
 								</div>
 							</div>
 						</div>
-
 					</div>
+
+					<!--Banner-->
+					<div class="img-banner">
+						<img class="img-banner" src="images/banner-sigem.png" alt="imagem principal">
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -124,4 +140,5 @@
 	<script src="js/main.js"></script>
 
 </body>
+
 </html>

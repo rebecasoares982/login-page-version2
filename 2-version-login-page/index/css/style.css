@@ -47,7 +47,6 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  zoom: 75%;
 }
 
 article,
@@ -11827,18 +11826,24 @@ h5,
 }
 
 .form-group .label {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
 }
+
+.label-space {
+  margin-bottom: 10px;
+}
+
 
 .form-group a {
   color: gray;
 }
 
 .form-control {
+  width: 200px;
   height: 48px;
   background: #fff;
   color: #000;
@@ -12049,7 +12054,7 @@ h5,
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   margin-top: 2rem;
 }
 
@@ -12105,7 +12110,7 @@ h5,
 }
 
 .logo-sigem {
-  max-width: 320px;
+  max-width: 220px;
   max-height: 150px;
   width: auto;
   height: auto;
@@ -12127,7 +12132,7 @@ h5,
   border-style: none;
   max-width: 100%;
   max-height: none;
-  width: 600px;
+  width: 500px;
   height: auto;
 }
 
@@ -12161,3 +12166,43 @@ h5,
 ::selection {
   background-color: #ffeeba;
 }
+/* Alterar a aparência padrão do input */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Estilo da bolinha selecionada */
+input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #e3b04b; /* Alterar cor da bolinha selecionada */
+  border-radius: 50%;
+  margin: 2px;
+}
+
+/* Espaçamento entre o input e o texto */
+label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px; /* Alterar espaçamento */
+  cursor: pointer;
+}
+
+.submit {
+  max-width: 120px; /* ou outro valor desejado */
+}
+
+  .btn-custom {
+    width: 140px; /* ou o valor desejado */
+    padding: 0.295rem 0.75rem; /* remova o preenchimento extra */
+  }
