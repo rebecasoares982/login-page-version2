@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<title>SIGEM</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<section class="ftco-section">
+		<!-- <div class="container"> -->
+		<div class="row justify-content-center">
+			<div class="col-md-6 text-center mb-3">
+				<img class="logo-sigem" src="images/sigem.png" alt="Descrição da imagem">
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-12">
+				<div class="wrap d-md-flex">
+					<div class="img-banner">
+						<img class="img-banner" src="images/banner-sigem.png" alt="imagem principal">
+					</div>
+					<div class="login-wrap p-4 p-md-5">
+						<div class="d-flex">
+							<div class="w-100">
+								<h3>Primeiro Acesso?</h3>
+								<h6 class="h6 text-dark text-uppercase mb-4">Informe os dados abaixo.</h6>
+							</div>
+						</div>
+
+						<div class="form-group mb-3">
+							<label class="label" for="escola">Escola</label>
+							<select id="escola" name="escola" class="form-control" required>
+								<option value="">Selecione a escola</option>
+								<option value="escola1">Escola 1</option>
+								<option value="escola2">Escola 2</option>
+								<option value="escola3">Escola 3</option>
+							</select>
+						</div>
+
+						<div class="form-group mb-3">
+							<label class="label" for="turma">Turma</label>
+							<select id="turma" name="turma" class="form-control" required>
+								<option value="">Selecione a turma</option>
+								<option value="turma1">Turma 1</option>
+								<option value="turma2">Turma 2</option>
+								<option value="turma3">Turma 3</option>
+							</select>
+						</div>
+
+						<div class="form-group mb-3">
+							<label class="label" for="nome">Nome completo</label>
+							<input type="text" id="nome" name="nome" class="form-control"
+								placeholder="Digite o nome completo" required>
+						</div>
+
+						<div class="form-group mb-3">
+							<label class="label" for="data">Data de nascimento</label>
+							<input type="date" id="data" name="data" class="form-control" required>
+						</div>
+
+						<div class="validar">
+							<button type="submit"
+								class="form-control btn btn-primary rounded submit px-3">Validar</button>
+
+						</div>
+
+						<br>
+						<div class="voltar">
+							<a href="https://homologacao.sigem.portalimap.org.br/"
+								class="form-control btn btn-primary rounded submit px-3">Voltar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
+			<div class="step-content active" id="step-content-2">
+				<form action="/Account/Register/353725" class="form-horizontal" id="register" method="post" role="form" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="Thw_xHr_8iEh88vkYIcKdkJLybGBgrVIfrGFoHanKopeZ0STafJCniwabFQ-gP4d8CyYMyDXkxm1aHuHmxKvWY5lxmP-1xBpzZb2y1mG-6M1">    <p>Preencha os dados abaixo.</p>
+				<div class="validation-summary-valid text-danger" data-valmsg-summary="true"><ul><li style="display:none"></li>
+				</ul></div><input data-val="true" data-val-number="O campo Int32 deve ser um número." data-val-required="O campo Int32 é obrigatório." id="Id" name="Id" type="hidden" value="353725">    <div class="form-group">
+						<label for="Email">Email</label>
+						<input class="form-control" data-val="true" data-val-email="O campo Email não é um endereço de email válido." data-val-required="O campo Email é obrigatório." id="Email" name="Email" type="text" value="">
+						<span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+					</div>
+					<div class="form-group">
+						<label for="PhoneNumber">Telefone</label>
+						<input class="form-control" data-val="true" data-val-required="O campo Telefone é obrigatório." id="PhoneNumber" name="PhoneNumber" type="text" value="">
+						<span class="field-validation-valid text-danger mask_telefone" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+					</div>
+					<div class="form-group">
+						<label for="Password">Senha</label>
+						<input class="form-control" data-val="true" data-val-length="A Senha deve ter no mínimo 6 caracteres." data-val-length-max="100" data-val-length-min="6" data-val-required="O campo Senha é obrigatório." id="Password" name="Password" type="password">
+						<span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+					</div>
+					<div class="form-group">
+						<label for="ConfirmPassword">Confirmar Senha</label>
+						<input class="form-control" data-val="true" data-val-equalto="A senha e a senha de confirmação não correspondem." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password">
+						<span class="field-validation-valid text-danger" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+					</div>
+					<p>A senha deverá ter no mínimo 6 caracteres com letras e números.</p>
+					<div class="form-buttons">
+						<input id="acessar-sistema" value="Acessar o sistema" class="btn btn-warning btn-block" type="button">
+					</div>
+				</form></div>
+				-->
+
+		</div>
+		</div>
+	</section>
+
+	<script>
+		$.validator.addMethod('sigem_password', function (value, element) {
+			return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
+		}, 'A senha deverá ter letras e números.');
+
+		$('#EscolaId').change((e) => {
+			let turmas = $('#TurmaId');
+
+			turmas.empty();
+
+			$.ajax({
+				url: '/account/turmas',
+				data: { id: e.target.value },
+				method: 'get',
+				success: (json) => {
+					turmas.append(`<option value=''>Selecione um registro</option>`);
+
+					$(json).each((index, element) => {
+						turmas.append(`<option value='${element.id}'>${element.nome}</option>`);
+					});
+				}
+			});
+		});
+
+		$('input:button').click((e) => {
+			let form = $('form');
+			let progress = $('.progress');
+			let progressBar = $('.progress-bar');
+
+			if (form.valid()) {
+				$(e.target).hide();
+				progress.show();
+				let max = parseInt(progress.css('width').match(/\d{1,}/)[0]);
+
+				setInterval((e) => {
+					let width = parseInt(progressBar.css('width').match(/\d{1,}/)[0]);
+
+					if (width < max * .75)
+						progressBar.css('width', `${width += 50}px`);
+
+				}, 100);
+
+				$.ajax({
+					url: '/account/validate',
+					method: 'post',
+					data: serializeFormJson(form),
+					success: (result) => {
+						progressBar.css('width', '100%');
+
+						setTimeout(() => {
+							$('#step-content-2').html(result);
+							$('#step-content-1').removeClass('active');
+							$('#step-content-2').addClass('active');
+
+							$('#register').validate();
+
+							$('#PhoneNumber').mask('(99) 99999-9999');
+
+							$('#Email').rules('add', {
+								required: true,
+								email: true,
+								messages: {
+									required: 'Este campo deve ser preenchido.',
+									email: 'Informe um email válido.'
+								}
+							});
+
+							$('#PhoneNumber').rules('add', {
+								required: true,
+								messages: {
+									required: 'Este campo deve ser preenchido.'
+								}
+							});
+
+							$('#Password').rules('add', {
+								required: true,
+								minlength: 6,
+								messages: {
+									required: 'Este campo deve ser preenchido.',
+									minlength: 'A senha deve conter no mínimo {0} caracteres.'
+								},
+								sigem_password: true
+							});
+
+							$('#ConfirmPassword').rules('add', {
+								required: true,
+								minlength: 6,
+								equalTo: "#Password",
+								messages: {
+									required: 'Este campo deve ser preenchido.',
+									minlength: 'A senha deve conter no mínimo {0} caracteres.',
+									equalTo: 'Preencha com o mesmo valor do campo senha.'
+								}
+							});
+
+							$('#acessar-sistema').click((e) => {
+								var form = $('#register');
+
+								if (form.valid()) {
+									form.submit()
+								}
+							})
+						}, 1000);
+					},
+					error: (err) => {
+						console.dir(err);
+						progressBar.css('width', '0px');
+						progress.hide();
+						$(e.target).show();
+
+						$('.alert.alert-message ul').html('<li class="mb-1">Não foi encontrado aluno com os dados informados. Entre em contato com Secretaria de sua Escola.</li>');
+					}
+				});
+			}
+		});
+	</script>
+
+</body>
+
+</html>

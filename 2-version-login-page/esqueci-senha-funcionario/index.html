@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<title>SIGEM</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<section class="ftco-section">
+		<!-- <div class="container"> -->
+		<div class="row justify-content-center">
+			<div class="col-md-6 text-center mb-3">
+				<img class="logo-sigem" src="images/sigem.png" alt="Descrição da imagem">
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-12">
+				<div class="wrap d-md-flex">
+					<div class="img-banner">
+						<img class="img-banner" src="images/banner-sigem.png" alt="imagem principal">
+					</div>
+					<div class="login-wrap p-4 p-md-5">
+						<div class="d-flex">
+							<div class="w-100">
+								<h3 class="mb-4">Recuperar senha</h3>
+							</div>
+						</div>
+						<div class="form-group mb-3">
+							<label class="label" for="funcionario">Funcionário</label>
+							<input type="checkbox" id="funcionario" name="funcionario" required>
+						</div>
+						<div class="form-group mb-3">
+							<label class="label" for="cpf">CPF</label>
+							<input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite o CPF"
+								required maxlength="14" oninput="formatarCPF(this)">
+						</div>
+
+							<div class="esquecisenha-enviar">
+								<button type="submit" class="form-control btn btn-primary rounded submit px-3">Enviar</button>
+							</div>
+							<br>
+							<div class="esquecisenha-voltar">
+								<a href="https://homologacao.sigem.portalimap.org.br/" class="form-control btn btn-primary rounded submit px-3">Voltar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<title>SIGEM</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<section class="ftco-section">
+		<!-- <div class="container"> -->
+		<div class="row justify-content-center">
+			<div class="col-md-6 text-center mb-3">
+				<img class="logo-sigem" src="images/sigem.png" alt="Descrição da imagem">
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-12">
+				<div class="wrap d-md-flex">
+					<div class="img-banner">
+						<img class="img-banner" src="images/banner-sigem.png" alt="imagem principal">
+					</div>
+					<div class="login-wrap p-4 p-md-5">
+						<div class="d-flex">
+							<div class="w-100">
+								<h3 class="mb-4">Login</h3>
+							</div>
+						</div>
+						<div class="form-group mb-3">
+							<label class="label" for="estado">Estado</label>
+							<select class="form-control" id="estado" required>
+								<option value="">Selecione o estado</option>
+								<option value="ba">Bahia</option>
+								<option value="pe">Pernambuco</option>
+								<option value="pr">Paraná</option>
+							</select>
+						</div>
+						<div class="form-group mb-3">
+							<label class="label" for="municipio">Município</label>
+							<select class="form-control" id="municipio" required>
+								<option value="">Selecione o município</option>
+								<option value="salvador">Salvador</option>
+								<option value="recife">Recife</option>
+								<option value="curitiba">Curitiba</option>
+							</select>
+						</div>
+
+						<div id="form-div" style="display:none;">
+
+							<div class="container">
+								<div class="toggle-forms">
+									<button class="btn active" data-form="form1">Aluno</button>
+									<button class="btn" data-form="form2">Funcionário</button>
+								</div>
+								<div class="forms-container">
+									<form id="form1" class="form active">
+										<div class="form-group mb-3">
+											<label class="label" for="name">Nº de matrícula</label>
+											<input type="text" class="form-control" placeholder="Nº de matrícula"
+												required>
+										</div>
+										<div class="form-group mb-3">
+											<label class="label" for="password">Senha</label>
+											<input type="password" class="form-control" placeholder="Senha" required>
+										</div>
+										<div class="form-group">
+											<button type="submit"
+												class="form-control btn btn-primary rounded submit px-3">Entrar</button>
+										</div>
+										<div class="form-group d-md-flex">
+											<div class="w-100 text-left">
+												<a href="#">Esqueci a senha</a>
+											</div>
+										</div>
+									</form>
+									<form id="form2" class="form">
+										<form action="#" class="signin-form">
+											<div class="form-group mb-3">
+												<label class="label" for="name">CPF</label>
+												<input type="text" class="form-control" placeholder="Nº do CPF"
+													required>
+											</div>
+											<div class="form-group mb-3">
+												<label class="label" for="password">Senha</label>
+												<input type="password" class="form-control" placeholder="Senha"
+													required>
+											</div>
+											<div class="form-group">
+												<button type="submit"
+													class="form-control btn btn-primary rounded submit px-3">Acessar
+													atividades remotas</button>
+											</div>
+											<div class="form-group">
+												<button type="submit"
+													class="form-control btn btn-primary rounded submit px-3">Acessar a
+													área
+													administrativa</button>
+											</div>
+											<div class="form-group d-md-flex">
+												<div class="w-100 text-left">
+
+													<a href="#">Esqueci a senha</a>
+												</div>
+											</div>
+										</form>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
