@@ -576,10 +576,11 @@ pre code {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 5px;
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 576px) {
@@ -707,7 +708,7 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
+  /*padding-right: 15px;*/
   padding-left: 15px;
 }
 
@@ -2400,10 +2401,6 @@ select.form-control[multiple] {
 
 textarea.form-control {
   height: auto;
-}
-
-.form-group {
-  margin-bottom: 1rem;
 }
 
 .form-text {
@@ -11774,7 +11771,7 @@ h5,
 
 .wrap {
   width: 100%;
-  height: 760px;
+  height: 485px !important;
   overflow: hidden;
   background: #fff;
   border-radius: 5px;
@@ -11786,7 +11783,7 @@ h5,
 @media (min-width: 250px) {
   .wrap {
     width: 100%;
-    height: auto;
+    height: 560px;
     overflow: hidden;
     background: #fff;
     border-radius: 5px;
@@ -12051,16 +12048,9 @@ h5,
   padding-left: 1rem;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  margin-top: 2rem;
-}
-
 .toggle-forms {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 1rem;
 }
 
@@ -12110,8 +12100,8 @@ h5,
 }
 
 .logo-sigem {
-  max-width: 220px;
-  max-height: 150px;
+  max-width: 180px;
+  max-height: 140px;
   width: auto;
   height: auto;
   transform: scale(1.4);
@@ -12132,8 +12122,9 @@ h5,
   border-style: none;
   max-width: 100%;
   max-height: none;
-  width: 500px;
+  width: 400px;
   height: auto;
+  margin-left: 15px;
 }
 
 /* Para dispositivos móveis com largura menor que 768 pixels */
@@ -12166,6 +12157,7 @@ h5,
 ::selection {
   background-color: #ffeeba;
 }
+
 /* Alterar a aparência padrão do input */
 input[type="radio"] {
   appearance: none;
@@ -12185,7 +12177,8 @@ input[type="radio"]:checked::before {
   display: block;
   width: 8px;
   height: 8px;
-  background-color: #e3b04b; /* Alterar cor da bolinha selecionada */
+  background-color: #e3b04b;
+  /* Alterar cor da bolinha selecionada */
   border-radius: 50%;
   margin: 2px;
 }
@@ -12194,15 +12187,23 @@ input[type="radio"]:checked::before {
 label {
   display: inline-flex;
   align-items: center;
-  margin-right: 10px; /* Alterar espaçamento */
+  margin-right: 10px;
+  /* Alterar espaçamento */
   cursor: pointer;
 }
 
 .submit {
-  max-width: 120px; /* ou outro valor desejado */
+  max-width: 120px;
+  /* ou outro valor desejado */
 }
 
-  .btn-custom {
-    width: 140px; /* ou o valor desejado */
-    padding: 0.295rem 0.75rem; /* remova o preenchimento extra */
-  }
+.btn-custom {
+  width: 140px;
+  /* ou o valor desejado */
+  padding: 0.295rem 0.75rem;
+  /* remova o preenchimento extra */
+}
+
+.form {
+  display: none;
+}
