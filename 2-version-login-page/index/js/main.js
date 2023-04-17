@@ -5,35 +5,18 @@
 
 })(jQuery);
 
-const estado = document.getElementById("estado");
-const municipio = document.getElementById("municipio");
-const formDiv = document.getElementById("form-div");
-const toggleForms = document.querySelector(".toggle-forms");
-const forms = document.querySelectorAll(".form");
+const formToggle = document.querySelector('.toggle-forms');
+const formAluno = document.querySelector('.form-aluno');
+const formFuncionario = document.querySelector('.form-funcionario');
 
-estado.addEventListener("change", function () {
-  if (estado.value !== "" && municipio.value !== "") {
-    formDiv.style.display = "block";
-  } else {
-    formDiv.style.display = "none";
-  }
-});
+formToggle.addEventListener('click', (event) => {
+if (event.target.value === 'form1') {
+formAluno
 
-municipio.addEventListener("change", function () {
-  if (estado.value !== "" && municipio.value !== "") {
-    formDiv.style.display = "block";
-  } else {
-    formDiv.style.display = "none";
-  }
-});
-
-toggleForms.addEventListener("change", function (event) {
-  if (event.target.type === "radio") {
-    forms.forEach(function (form) {
-      form.style.display = "none";
-    });
-
-    const selectedForm = document.getElementById(event.target.value);
-    selectedForm.style.display = "block";
-  }
+.style.display = 'block';
+formFuncionario.style.display = 'none';
+} else if (event.target.value === 'form2') {
+formFuncionario.style.display = 'block';
+formAluno.style.display = 'none';
+}
 });

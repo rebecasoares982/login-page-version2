@@ -52,7 +52,7 @@
 							</div>
 						</div>
 
-						<div id="form-div" style="display:none; text-align: left;">
+						<div id="form-div" style="text-align: left;">
 							<div class="container">
 								<div class="toggle-forms">
 									<label>
@@ -66,40 +66,44 @@
 								</div>
 
 								<!--Formulário alunos-->
-								<div class="form-group row">
-									<div class="col-md-6 mb-3">
-										<label class="label" for="name">Matrícula</label>
-										<input type="text" class="form-control" placeholder="Nº de matrícula" required>
-									</div>
-									<div class="col-md-6 mb-3">
-										<label class="label" for="password">Senha</label>
-										<input type="password" class="form-control" placeholder="Senha" required>
-									</div>
-									<div class="col-md-9 d-md-flex justify-content-between align-items-center">
-										<div class="text-md-left mb-3 mb-md-0">
-											<a href="#">Esqueci a senha</a>
-											<br>
-											<a href="#">Primeiro acesso</a>
+								<div id="form-aluno" class="form-aluno">
+									<div class="form-group row">
+										<div class="col-md-6 mb-3">
+											<label class="label" for="matricula">Matrícula</label>
+											<input type="text" class="form-control" id="matricula"
+												placeholder="Nº de matrícula" required>
 										</div>
-										<div class="form-group">
-											<button type="submit"
-												class="form-control btn btn-primary rounded submit px-3">Entrar</button>
+										<div class="col-md-6 mb-3">
+											<label class="label" for="senha-aluno">Senha</label>
+											<input type="password" class="form-control" id="senha-aluno"
+												placeholder="Senha" required>
+										</div>
+										<div class="col-md-9 d-md-flex justify-content-between align-items-center">
+											<div class="text-md-left mb-3 mb-md-0">
+												<a href="#">Esqueci a senha</a>
+												<br>
+												<a href="#">Primeiro acesso</a>
+											</div>
+											<div class="form-group">
+												<button type="submit"
+													class="form-control btn btn-primary rounded submit px-3">Entrar</button>
+											</div>
 										</div>
 									</div>
+								</div>
 
-									<!-- Formulário de funcionários-->
-									<form id="form2" class="form signin-form">
-										<div class="form-group row funcionario">
-											<div class="col-md-6 mb-3">
-												<label class="label" for="cpf">CPF</label>
-												<input type="text" class="form-control" id="cpf" placeholder="Nº do CPF"
-													required>
-											</div>
-											<div class="col-md-6 mb-3">
-												<label class="label" for="password">Senha</label>
-												<input type="password" class="form-control" id="password"
-													placeholder="Senha" required>
-											</div>
+								<!-- Formulário de funcionários-->
+								<div id="form-funcionario" class="form-funcionario" style="display:none;">
+									<div class="form-group row">
+										<div class="col-md-6 mb-3">
+											<label class="label" for="cpf">CPF</label>
+											<input type="text" class="form-control" id="cpf" placeholder="Nº do CPF"
+												required>
+										</div>
+										<div class="col-md-6 mb-3">
+											<label class="label" for="senha-funcionario">Senha</label>
+											<input type="password" class="form-control" id="senha-funcionario"
+												placeholder="Senha" required>
 										</div>
 										<div class="form-group">
 											<div class="btn-group">
@@ -116,22 +120,22 @@
 												<a href="#">Esqueci a senha</a>
 											</div>
 										</div>
-									</form>
+									</div>
 
-									<!---->
+						<!---->
 
-								</div>
-							</div>
-						</div>
 					</div>
-
-					<!--Banner-->
-					<div class="img-banner">
-						<img class="img-banner" src="images/banner-sigem.png" alt="imagem principal">
-					</div>
-
 				</div>
 			</div>
+		</div>
+
+		<!--Banner-->
+		<div class="img-banner">
+			<img class="img-banner" src="images/banner-sigem.png" alt="imagem principal">
+		</div>
+
+		</div>
+		</div>
 		</div>
 		</div>
 	</section>
