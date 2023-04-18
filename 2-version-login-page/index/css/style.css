@@ -12192,18 +12192,26 @@ label {
   cursor: pointer;
 }
 
+/*
 .submit {
   max-width: 120px;
-  /* ou outro valor desejado */
 }
 
 .btn-custom {
   width: 140px;
-  /* ou o valor desejado */
   padding: 0.295rem 0.75rem;
-  /* remova o preenchimento extra */
 }
+*/
 
 .form {
   display: none;
+}
+
+.btn-custom {
+  width: 105px;
+  padding: 0.255rem 0.35rem;
+}
+
+.submit {
+  max-width: 105px;
 }
